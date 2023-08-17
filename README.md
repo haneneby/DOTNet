@@ -29,7 +29,8 @@ Diffuse optical tomography,inverse problem, image reconstruction, deep learning,
 1. [Contribution](#contribution)
 2. [Installation](#install)
 3. [Training](#Training)
-4. [Questions?](#faq)
+4. [Tranfer Learning](#Tranfer_Learning)
+5. [Questions?](#faq)
 
 ### Contribution
 <a name="contribution"></a>
@@ -62,6 +63,8 @@ Epoch 1/100
   16/3739 [..............................] - ETA: 34:23 - loss: 1.7838
 ```
 #### Tranfer Learning
+<a name="Tranfer_Learning"></a>
+
 A transfer learning network, implemented as a multilayer perceptron, tackles the domain shift between the real data measurement, as collected from the probe and used during inference, and the in silico data measurement used during training time.
 By minimizing a loss, the transfer learning network learns to translate the real world data distribution onto the in silico data distribution. 
 
