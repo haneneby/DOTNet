@@ -56,13 +56,25 @@ cd DOTNet
 python3 DOTNet.py --epochs 100 --outputfolder ../myoutput.      
 
 ```
-```
 This will show something like:
 ```bash
 Epoch 1/100
   16/3739 [..............................] - ETA: 34:23 - loss: 1.7838
 ```
+#### Tranfer Learning
+A transfer learning network, implemented as a multilayer perceptron, tackles the domain shift between the real data measurement, as collected from the probe and used during inference, and the in silico data measurement used during training time.
+By minimizing a loss, the transfer learning network learns to translate the real world data distribution onto the in silico data distribution. 
 
+To train the TL module run the following command:
+
+<a name="Evaluation"></a>
+```bash
+mkdir myoutput
+cd DOTNet
+python3 TL.py  --input testdatadir --outputfolder ../myoutput 
+```
+
+The results will be saved output in `myoutput`. 
 ### Questions?
 <a name="faq"></a>
 Please create a [new issue](https://github.com/haneneby/DOTNet/issues/new/choose) detailing concisely, yet complete what issue you encountered, in a reproducible way.
