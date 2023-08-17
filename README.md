@@ -62,7 +62,7 @@ This will show something like:
 Epoch 1/100
   16/3739 [..............................] - ETA: 34:23 - loss: 1.7838
 ```
-#### Tranfer Learning
+### Tranfer Learning
 <a name="Tranfer_Learning"></a>
 
 A transfer learning network, implemented as a multilayer perceptron, tackles the domain shift between the real data measurement, as collected from the probe and used during inference, and the in silico data measurement used during training time.
