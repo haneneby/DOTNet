@@ -1,5 +1,5 @@
 # Deep learning based image reconstruction for diffuse optical tomography
-This is the software repository "DOTNet" for [our](https://link.springer.com/chapter/10.1007/978-3-030-00129-2_13) [paper](#cite) addresses the problem of reconstructing images in acquired diffuse optical tomography using deep learning.
+This is the software repository "DOTNet" for [our](https://link.springer.com/chapter/10.1007/978-3-030-00129-2_13) [paper](#cite) addresses the problem of reconstructing images acquired by diffuse optical tomography using deep learning.
 
 ## Motivation
 Diffuse optical tomography (DOT) is a relatively new imaging modality that has demonstrated its clinical potential of probing tumors in a non-invasive and affordable way. 
