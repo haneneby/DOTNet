@@ -8,7 +8,7 @@ Standard reconstruction approaches involve approximating the inverse function an
 In this work, we evaluate the use of a deep learning model to reconstruct images directly from their corresponding DOT projection data. 
 The inverse problem is solved by training the model via training pairs created using physics-based simulation. 
 Both quantitative and qualitative results indicate the superiority of the proposed network compared to an analytic technique.
-![Architecture](Images/fig1_n.png)
+![Architecture](newFig2.png)
 The overall architecture of the proposed model is shown on the right, where the arrow after the first fully connected layer represents the reshaping procedure before the convolution layers.
 
 ## Keywords
