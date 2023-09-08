@@ -61,9 +61,8 @@ cd DOTNet
 python3 DOTNet.py      
 
 ```
-By passing an input measurement through a set of nonlinear transformations one can reconstruct the equivalent image.
-The proposed architecture consists of a dense layer followed by a set of convolution layers which are designed to efficiently combine features from the first layer with those of deeper layers.
-Treaining the architecture of our proposed model will show something like:
+By passing an input measurement through a set of nonlinear transformations one can reconstruct the equivalent image. The proposed architecture consists of a dense layer followed by a set of convolution layers which are designed to efficiently combine features from the first layer with those of deeper layers. Training the architecture of our proposed model will show something like:
+
 
 ```bash
 Epoch 1/100
