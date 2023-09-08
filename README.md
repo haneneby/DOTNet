@@ -12,7 +12,7 @@ Both quantitative and qualitative results indicate the superiority of the propos
 The overall architecture of the proposed model is shown on the right, where the arrow after the first fully connected layer represents the reshaping procedure before the convolution layers. Note that the model was only trained on synthetic data and we kept the phantom data for evaluation.
 
 ## Keywords
-Diffuse optical tomography,inverse problem, image reconstruction, deep learning, tissue estimation, handheld probe.
+Diffuse optical tomography, inverse problem, image reconstruction, deep learning, tissue estimation, handheld probe.
 
 ## Citation
 <a name="Cite"></a>
