@@ -9,7 +9,7 @@ In this work, we evaluate the use of a deep learning model to reconstruct images
 The inverse problem is solved by training the model via training pairs created using physics-based simulation. 
 Both quantitative and qualitative results indicate the superiority of the proposed network compared to an analytic technique.
 ![Architecture](newFig2.png)
-The overall architecture of the proposed model is shown on the right, where the arrow after the first fully connected layer represents the reshaping procedure before the convolution layers.
+The overall architecture of the proposed model is shown on the right, where the arrow after the first fully connected layer represents the reshaping procedure before the convolution layers. Note that the model was only trained on synthetic data and we kept the phantom data for evaluation.
 
 ## Keywords
 Diffuse optical tomography,inverse problem, image reconstruction, deep learning, tissue estimation, handheld probe.
