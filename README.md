@@ -8,7 +8,9 @@ Standard reconstruction approaches involve approximating the inverse function an
 In this work, we evaluate the use of a deep learning model to reconstruct images directly from their corresponding DOT projection data. 
 The inverse problem is solved by training the model via training pairs created using physics-based simulation. 
 Both quantitative and qualitative results indicate the superiority of the proposed network compared to an analytic technique.
+
 ![Architecture](newFig2.png)
+
 The overall architecture of the proposed model is shown on the right, where the arrow after the first fully connected layer represents the reshaping procedure before the convolution layers. Note that the model was only trained on synthetic data and we kept the phantom data for evaluation.
 
 ## Keywords
@@ -34,10 +36,11 @@ Diffuse optical tomography, inverse problem, image reconstruction, deep learning
 
 ### Contribution
 <a name="contribution"></a>
-- We propose the first end-to-end deep learning model for near-infrared-based optical imaging.
-- We leverage a physics-based optical diffusion simulation to generate in silico training datasets 
-- We train the reconstruction model using in silico data only and test it on real measurements acquired from a phantom dataset subject to sensor non-idealities and noise.
-- We show the utility of our synthetic data generation technique in mimicking real measurements and the generalization ability of our model to unseen phantom datasets. 
+- Propose the first end-to-end deep learning model for near-infrared-based optical imaging.
+- Leverage a physics-based optical diffusion simulation to generate in silico training datasets. 
+- Train the reconstruction model using in silico data only and test it on real measurements acquired from a phantom dataset subject to sensor non-idealities and noise.
+- Show the utility of our synthetic data generation technique in mimicking real measurements and the generalization ability of our model to unseen phantom datasets.
+  
 ### Installation
 <a name="install"></a>
 
