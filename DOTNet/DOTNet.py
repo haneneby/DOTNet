@@ -110,7 +110,6 @@ def initializer(name=None,logs={}):
 
 
 def train(epochs, batch_size, alpha,beta,dir):
-    alpha = K.variable(alpha)
     shape = (256,)
     keras.callbacks.Callback()
     reduce_lr = keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.9, patience=5, min_lr=0.000001, verbose=0, mode='auto') #ReduceLROnPlateau(monitor='val_loss', factor=0.1, patience=5, min_lr=0.00001)
@@ -118,13 +117,8 @@ def train(epochs, batch_size, alpha,beta,dir):
     filepath= dir+'/Output/checkpoint-{epoch:02d}.hdf5'
     checkpoint = ModelCheckpoint(filepath, verbose=1,  monitor='val_accuracy', save_weights_only=True, save_best_only=True, mode='max')
     model = Models(shape).Recons_model()
-    model_loss= loss_r(alpha,batch_size) 
     model.compile(   
-        loss = 
-        {    
-        "reconstruction_output1": model_loss,
-        },
-        metrics = {"reconstruction_output1": ['mse']},
+        loss = "mse"
         optimizer=tf.keras.optimizers.Adam(0.0001, beta_1=0.9, beta_2=0.98,
                                     epsilon=1e-9)
     )
