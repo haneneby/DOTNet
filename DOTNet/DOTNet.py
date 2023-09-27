@@ -7,7 +7,6 @@ from Utils.LoadTestData import load_data_t, preprocess_t
 from Models import *
 from Utils.Tools import *
 from Utils.Utils_models import *
-from Utils.losses import *
 from Utils.visualize import *
 import tensorflow as tf
 os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'
@@ -109,7 +108,7 @@ def initializer(name=None,logs={}):
         return configuration
 
 
-def train(epochs, batch_size, alpha,beta,dir):
+def train(epochs, batch_size,dir):
     shape = (256,)
     keras.callbacks.Callback()
     reduce_lr = keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.9, patience=5, min_lr=0.000001, verbose=0, mode='auto') #ReduceLROnPlateau(monitor='val_loss', factor=0.1, patience=5, min_lr=0.00001)
@@ -118,7 +117,7 @@ def train(epochs, batch_size, alpha,beta,dir):
     checkpoint = ModelCheckpoint(filepath, verbose=1,  monitor='val_accuracy', save_weights_only=True, save_best_only=True, mode='max')
     model = Models(shape).Recons_model()
     model.compile(   
-        loss = "mse"
+        loss = "mse",
         optimizer=tf.keras.optimizers.Adam(0.0001, beta_1=0.9, beta_2=0.98,
                                     epsilon=1e-9)
     )
@@ -149,7 +148,7 @@ if __name__ == "__main__":
     outputfolder=  conf['outputdirectory']
     if mode == 'train':
         measure_1,x_train, testmeasure_1,x_test =load_data(dataset_dir)
-        train(epochs,batchsize, alpha,outputfolder)
+        train(epochs,batchsize,outputfolder)
     elif mode == 'test':
         testmeasure_1, x_test =load_data_t(dataset_dir)
         test(testmeasure_1,x_test ,outputfolder)
