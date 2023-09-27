@@ -4,7 +4,6 @@
 #python_version  :3.5.4
 import tensorflow as tf
 from sklearn.preprocessing import StandardScaler
-# from keras.applications.vgg19 import VGG19
 import keras.backend as K
 from keras.models import Model
 from tensorflow.keras.optimizers import Adam

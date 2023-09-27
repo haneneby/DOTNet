@@ -1,4 +1,3 @@
-#Multi-Frequency reconstruction models
 from Block_models import *
 from keras.layers import Dense
 from keras.layers.core import Activation
@@ -21,7 +20,7 @@ class Models(object):
         
         self.input_shape = input_shape
 
-    ##  Multi-Freq_Joint recons and Diag model
+    ##  Single- Freq recons 
     def Recons_model(self):
 	    target_shape = [128, 128,1]
 	    normal=keras.initializers.he_normal(seed=None)

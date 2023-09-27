@@ -88,7 +88,6 @@ def initializer(name=None,logs={}):
             except AttributeError as e:
                 continue
         OUTPUTROOT = configuration['outputfolder']
-        # outputdirectory = os.path.join(OUTPUTROOT)#, "{}_{}_{}".format(datetime.now().strftime("%Y%m%d_%Hh%Mm%Ss"), str(np.random.randint(1000)), configuration['seed']))
         current_directory = os.getcwd()
         outputdirectory = os.path.join(current_directory, OUTPUTROOT)
         if not os.path.exists(outputdirectory):
@@ -101,7 +100,6 @@ def initializer(name=None,logs={}):
         lgr.debug("CONF::\t Using configuration :: ")
         for k, v in configuration.items():
             lgr.info("CONF::\t\t {} -> {}".format(k, v))
-        # torch.manual_seed(configuration['seed'])
         seed(1)
         tf.random.set_seed(2)
         configuration['logger']=lgr
